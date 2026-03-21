@@ -97,6 +97,15 @@ section {
 
 
 /* === NAVBAR === */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
 .navbar {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -108,6 +117,12 @@ section {
 
 .navbar .logo img {
   height: 36px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .nav-links {
@@ -127,9 +142,73 @@ section {
   color: var(--color-secondary);
 }
 
+.nav-links a.active {
+  color: var(--color-secondary);
+}
+
 .nav-icon img {
   height: 28px;
   cursor: pointer;
+}
+
+/* === BURGER BUTTON === */
+
+.burger {
+  display: none; /* shown only on mobile via media query */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 110;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* animation of burger */
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* === BURGER OVERLAY === */
+.nav-overlay {
+  position: fixed;
+  top: 70px; /* overridden by js dynamically */
+  right: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: rgba(49, 37, 54, 0.925);
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 99;
+  padding: 48px 32px;
+}
+
+.nav-overlay.open {
+  transform: translateX(0);
+}
+
+.overlay-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 36px;
+}
+
+.overlay-links a {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--color-white);
+  transition: color 0.2s;
 }
 
 
@@ -439,6 +518,77 @@ section {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
+/* === ABOUT PAGE === */
+
+/* disabling mobile button */
+.btn-back.btn-back-mobile {
+  display: none;
+}
+
+.about-section {
+  min-height: calc(100vh - 70px);
+  background: color(white);
+  padding: 80px max(24px, calc((100% - var(--max-width)) / 2));
+  border-bottom: none;
+}
+
+.about-inner {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 520px;
+}
+
+.about-text h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 32px;
+}
+
+.about-text p {
+  font-size: 20px;
+  color: var(--color-dark);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+}
+
+/* go back button  */
+.btn-back {
+  display: inline-flex;
+  margin-top: 32px;
+  background: none;
+  border: none;
+}
+
+.btn-back img {
+  width: 48px;
+  height: 48px;
+  transform: rotate(-90deg); 
+  opacity: 0.35;
+  filter: brightness(0); 
+  transition: opacity 0.2s;
+}
+
+.btn-back:hover img {
+  opacity: 0.7;
+}
+
+
+
 
 /* === FOOTER === */
 .footer {
@@ -632,4 +782,250 @@ section {
 
 .back-to-top img:hover {
   opacity: 1;
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+
+  /* --- Navbar --- */
+  .nav-links{
+    display: none; /* hidden on mobile, burger takes over */
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  /* --- Hero --- */
+  .hero {
+    flex-direction: column;
+    padding: 48px 20px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  /* --- Features --- */
+  .features {
+    padding: 60px 20px;
+  }
+
+  .features h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+
+  .feature-card h3 {
+    font-size: 24px;
+  }
+
+  .feature-card p {
+    font-size: 18px;
+  }
+
+  /* --- How It Works --- */
+  .how-it-works {
+    padding: 60px 20px;
+  }
+
+  .how-it-works h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .step,
+  .step-reverse {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  /* text first, video second regardless of desktop layout */
+  .step .step-text,
+  .step-reverse .step-text {
+    order: -1;
+  }
+
+  .step-text h3 {
+    font-size: 24px;
+  }
+
+  .step-text p {
+    font-size: 18px;
+  }
+
+  /* --- Testimonials --- */
+  .testimonials {
+    padding: 60px 20px;
+  }
+
+  .testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    min-height: auto;
+  }
+
+  .testimonial-card h4 {
+    font-size: 20px;
+  }
+
+  .testimonial-card p {
+    font-size: 18px;
+  }
+
+  /* --- CTA --- */
+  .cta {
+    padding: 60px 20px;
+  }
+
+  .cta h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .cta-columns {
+    flex-direction: column;
+  }
+
+  .cta-col h3 {
+    font-size: 24px;
+  }
+
+  .cta-col p {
+    font-size: 18px;
+  }
+
+  .plan-table {
+    font-size: 16px;
+  }
+
+  .plan-table th,
+  .plan-table td {
+    padding: 10px 12px;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    padding: 0 20px;
+  }
+
+  .footer-inner {
+    margin-left: 0;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .footer-left {
+    padding-top: 48px;
+    padding-bottom: 32px;
+    width: 100%;
+  }
+
+  /* stack newsletter inputs vertically */
+  .form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .footer-right {
+    padding-top: 32px;
+    padding-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .footer-col {
+    min-width: 120px;
+  }
+
+  .footer-bottom {
+    padding: 24px 0;
+  }
+
+  .footer-logo img {
+    width: 100px;
+  }
+
+  /* --- About page --- */
+  .about-section {
+    padding: 48px 20px;
+    min-height: auto;
+  }
+
+  .about-inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* hide desktop button, show mobile one */
+  .about-text .btn-back:not(.btn-back-mobile) {
+    display: none;
+  }
+  .btn-back.btn-back-mobile {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 8px;
+    padding-right: 4px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+  }
+
+  .about-text p {
+    font-size: 18px;
+  }
+
 }

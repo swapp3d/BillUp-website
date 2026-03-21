@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BillUp – About</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="assets/icons/logo.svg" alt="BillUp Logo" /></a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#how-it-works">Setup Flow</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-icon">
+        <img src="assets/icons/avatar.svg" alt="User account" />
+      </div>
+
+      <!-- burger button (mobile only) -->
+      <button class="burger" id="burgerBtn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- burger overlay (mobile only) -->
+  <div class="nav-overlay" id="navOverlay">
+    <ul class="overlay-links">
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#how-it-works">Setup Flow</a></li>
+      <li><a href="index.html#testimonials">Testimonials</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+
+
+  <!-- About section -->
+  <section class="about-section">
+    <div class="about-inner">
+
+      <div class="about-text">
+        <h2>About Project</h2>
+        <p>
+          Managing bills across multiple platforms is often chaotic, leading to missed deadlines
+          and manual errors. BilliO was created to bridge this gap, unifying the entire
+          household billing experience into one seamless, transparent digital ecosystem
+          for everyone.
+        </p>
+        <p>
+          Residents gain total financial clarity with one-click payments and smart alerts, while
+          companies reduce overhead through automated billing and streamlined collections.
+          It is efficiency for providers and peace of mind for residents in one app.
+        </p>
+
+        <!-- back button desktop -->
+        <a href="index.html" class="btn-back" aria-label="Go back">
+          <img src="assets/icons/top_arrow.svg" alt="Go back" />
+        </a>
+      </div>
+
+      <div class="about-image">
+        <img src="assets/images/about_img.png" alt="BillUp on phone and laptop" />
+      </div>
+
+      <!-- back button mobile -->
+      <a href="index.html" class="btn-back btn-back-mobile" aria-label="Go back">
+        <img src="assets/icons/top_arrow.svg" alt="Go back" />
+      </a>
+
+    </div>
+  </section>
+
+
+  <script src="js/burger.js"></script>
+</body>
+</html>
