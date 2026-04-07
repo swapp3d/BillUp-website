@@ -112,49 +112,43 @@
     <h2>How It Works?</h2>
 
     <!-- Step 1: video left, text right -->
-    <div class="step">
+     <div class="step">
       <div class="step-media">
-        <iframe src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501670/BillUp_Register_ih1v0t.mp4" title="Create Account" allowfullscreen></iframe>
+        <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501670/BillUp_Register_ih1v0t.mp4" muted loop playsinline></video>
       </div>
       <div class="step-text">
         <h3>Create Account</h3>
-        <p>
-          Download the app and enter your basic information to set up your secure
+        <p>Download the app and enter your basic information to set up your secure
           account. Complete your profile to access the personal dashboard where
-          you will manage all your household expenses.
-        </p>
+          you will manage all your household expenses.</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Step 2: text left, video right -->
-    <div class="step step-reverse">
-      <div class="step-media">
-        <iframe src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501716/BillUp_Residence_fyiagz.mp4" title="Link Residences" allowfullscreen></iframe>
-      </div>
-      <div class="step-text">
-        <h3>Link Residences</h3>
-        <p>
-          Enter the address for your primary residence or multiple rental units.
-          Link your specific utility accounts to this address to centralise your
-          billing data in one organised location.
-        </p>
-      </div>
-    </div>
+      <!-- Step 2: text left, video right -->
+       <div class="step step-reverse">
+        <div class="step-media">
+          <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501716/BillUp_Residence_fyiagz.mp4" muted loop playsinline></video>
+        </div>
+        <div class="step-text">
+          <h3>Link Residences</h3>
+          <p>Enter the address for your primary residence or multiple rental units.
+            Link your specific utility accounts to this address to centralise your
+            billing data in one organised location.</p>
+          </div>
+        </div>
 
-    <!-- Step 3: video left, text right -->
-    <div class="step">
-      <div class="step-media">
-        <iframe src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501730/BillUp_Bills_zetug4.mp4" title="Manage Bills" allowfullscreen></iframe>
-      </div>
-      <div class="step-text">
-        <h3>Manage Bills</h3>
-        <p>
-          View a clear list of all your current and upcoming charges. Use the
-          dashboard to check balances and settle your bills directly through the
-          app to keep your accounts up to date.
-        </p>
-      </div>
-    </div>
+        <!-- Step 3: video left, text right -->
+         <div class="step">
+          <div class="step-media">
+            <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501730/BillUp_Bills_zetug4.mp4" muted loop playsinline></video>
+          </div>
+          <div class="step-text">
+            <h3>Manage Bills</h3>
+            <p>View a clear list of all your current and upcoming charges. Use the
+              dashboard to check balances and settle your bills directly through the
+              app to keep your accounts up to date.</p>
+            </div>
+          </div>
 
   </section>
 
@@ -397,8 +391,9 @@
 
   </footer>
 
-  <!-- burger script import -->
+  <!-- script imports -->
    <script src="js/burger.js"></script>
+   <script src="js/video-autoplay.js"></script>
 
 </body>
 </html>
