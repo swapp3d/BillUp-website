@@ -31,6 +31,28 @@ body {
   color: var(--color-dark);
   background-color: var(--color-white);
   line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* decorative background blobs */
+.bg-effects {
+  position: absolute;
+  top: 0;
+  left: -10%;        /* allows ~10% bleed on each side */
+  width: 120%;       /* total 20% overflow, clipped by body overflow */
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-effects img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 /* all headings use heading font */
@@ -55,6 +77,8 @@ ul {
 /* section dividers */
 section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes btn-breathe {
@@ -628,6 +652,8 @@ header {
   background: var(--color-footer-bg);
   color: #ccc;
   padding: 0 40px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-inner {
