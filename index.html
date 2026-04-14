@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BillUp helps you manage all household bills, utilities, and subscriptions in one secure dashboard. Stay organized and avoid late fees." />
+  <meta name="keywords" content="bill management app, track utilities, household bills, pay bills online, multiple residence management, automated billing, automated invoicing" />
   <title>BillUp – Manage All Your Bills In One Place</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet" />
@@ -14,13 +15,10 @@
 </head>
 <body>
 
-  <!-- background blobs  -->
   <div class="bg-effects">
-    <img src="assets/images/bg_effects.svg" alt="" />
+    <img src="assets/images/bg_effects.svg" alt="Background decorative shapes" />
   </div>
 
-
-  <!-- * Navbar * -->
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -37,17 +35,17 @@
 
       <div class="nav-right">
         <div class="nav-icon">
-          <img src="assets/icons/avatar.svg" alt="User account" />
+          <img src="assets/icons/avatar.svg" alt="User account profile" />
         </div>
-        <button class="burger" id="burgerBtn" aria-label="Open menu">
+        <button class="burger" id="burgerBtn" aria-label="Open navigation menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
-    </header>
+    </nav>
+  </header>
 
-  <!-- burger overlay -->
    <div class="nav-overlay" id="navOverlay">
     <ul class="overlay-links">
       <li><a href="#features">Features</a></li>
@@ -58,253 +56,226 @@
     </ul>
   </div>
 
-  <!-- * Hero * -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1>Manage All Your Bills In One Place!</h1>
-      <p>
-        Simplify your life by tracking every utility, subscription, and monthly
-        bill in one intuitive dashboard. Stay organised, avoid late fees, and
-        take total control of your household spending today.
-      </p>
-      <div class="hero-buttons">
-        <a href="https://github.com/swapp3d/BillUp-v2-be" target="_blank" class="btn-primary">Get Started</a>
-        <a href="about.html" class="btn-secondary">Learn More</a>
-      </div>
-    </div>
-
-    <div class="hero-image">
-      <img src="assets/images/hero_image.png" alt="BillUp hero image" />
-    </div>
-  </section>
-
-
-  <!-- * Features * -->
-  <section id="features" class="features">
-    <h2>Explore Features</h2>
-
-    <div class="features-grid">
-
-      <div class="feature-card">
-        <img src="assets/icons/billing_hub.svg" alt="" />
-        <h3>Billing Hub</h3>
-        <p>Centralise all expenses in one dashboard for complete visibility and smarter tracking.</p>
-      </div>
-
-      <div class="feature-card">
-        <img src="assets/icons/payments.svg" alt="" />
-        <h3>Easy Payments</h3>
-        <p>Pay bills instantly with secure, one-click payments and automated scheduling.</p>
-      </div>
-
-      <div class="feature-card">
-        <img src="assets/icons/residence.svg" alt="" />
-        <h3>Residence Support</h3>
-        <p>Easily manage and track utility costs across multiple properties or rental units.</p>
-      </div>
-
-      <div class="feature-card">
-        <img src="assets/icons/security.svg" alt="" />
-        <h3>Secure System</h3>
-        <p>Your data is protected by bank-grade encryption and the latest security protocols.</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- * How It Works * -->
-  <section id="how-it-works" class="how-it-works">
-    <h2>How It Works?</h2>
-
-    <!-- Step 1: video left, text right -->
-     <div class="step">
-      <div class="step-media">
-        <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501670/BillUp_Register_ih1v0t.mp4" muted loop playsinline></video>
-      </div>
-      <div class="step-text">
-        <h3>Create Account</h3>
-        <p>Download the app and enter your basic information to set up your secure
-          account. Complete your profile to access the personal dashboard where
-          you will manage all your household expenses.</p>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Manage All Your Bills In One Place!</h1>
+        <p>
+          Simplify your life by tracking every utility, subscription, and monthly
+          bill in one intuitive dashboard. Stay organised, avoid late fees, and
+          take total control of your household spending today.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://github.com/swapp3d/BillUp-v2-be" target="_blank" class="btn-primary">Get Started</a>
+          <a href="about.html" class="btn-secondary">Learn More</a>
         </div>
       </div>
 
-      <!-- Step 2: text left, video right -->
-       <div class="step step-reverse">
+      <div class="hero-image">
+        <img src="assets/images/hero_image.png" alt="BillUp app dashboard preview on mobile devices" />
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Bill Management Features</h2>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <img src="assets/icons/billing_hub.svg" alt="Billing Hub Icon" />
+          <h3>Billing Hub</h3>
+          <p>Centralise all expenses in one dashboard for complete visibility and smarter tracking.</p>
+        </article>
+
+        <article class="feature-card">
+          <img src="assets/icons/payments.svg" alt="Easy Payments Icon" />
+          <h3>Easy Payments</h3>
+          <p>Pay bills instantly with secure, one-click payments and automated scheduling.</p>
+        </article>
+
+        <article class="feature-card">
+          <img src="assets/icons/residence.svg" alt="Residence Support Icon" />
+          <h3>Residence Support</h3>
+          <p>Easily manage and track utility costs across multiple properties or rental units.</p>
+        </article>
+
+        <article class="feature-card">
+          <img src="assets/icons/security.svg" alt="Secure System Icon" />
+          <h3>Secure System</h3>
+          <p>Your data is protected by bank-grade encryption and the latest security protocols.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+      <h2>How It Works?</h2>
+
+       <div class="step">
         <div class="step-media">
-          <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501716/BillUp_Residence_fyiagz.mp4" muted loop playsinline></video>
+          <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501670/BillUp_Register_ih1v0t.mp4" muted loop playsinline aria-label="Video demonstrating account creation"></video>
         </div>
         <div class="step-text">
-          <h3>Link Residences</h3>
-          <p>Enter the address for your primary residence or multiple rental units.
-            Link your specific utility accounts to this address to centralise your
-            billing data in one organised location.</p>
+          <h3>Create Account</h3>
+          <p>Download the app and enter your basic information to set up your secure
+            account. Complete your profile to access the personal dashboard where
+            you will manage all your household expenses.</p>
           </div>
         </div>
 
-        <!-- Step 3: video left, text right -->
-         <div class="step">
+         <div class="step step-reverse">
           <div class="step-media">
-            <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501730/BillUp_Bills_zetug4.mp4" muted loop playsinline></video>
+            <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501716/BillUp_Residence_fyiagz.mp4" muted loop playsinline aria-label="Video demonstrating how to link residences"></video>
           </div>
           <div class="step-text">
-            <h3>Manage Bills</h3>
-            <p>View a clear list of all your current and upcoming charges. Use the
-              dashboard to check balances and settle your bills directly through the
-              app to keep your accounts up to date.</p>
+            <h3>Link Residences</h3>
+            <p>Enter the address for your primary residence or multiple rental units.
+              Link your specific utility accounts to this address to centralise your
+              billing data in one organised location.</p>
             </div>
           </div>
 
-  </section>
+           <div class="step">
+            <div class="step-media">
+              <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501730/BillUp_Bills_zetug4.mp4" muted loop playsinline aria-label="Video demonstrating bill management"></video>
+            </div>
+            <div class="step-text">
+              <h3>Manage Bills</h3>
+              <p>View a clear list of all your current and upcoming charges. Use the
+                dashboard to check balances and settle your bills directly through the
+                app to keep your accounts up to date.</p>
+              </div>
+            </div>
+    </section>
 
+    <section id="testimonials" class="testimonials">
+      <h2>Our Trusted Clients</h2>
 
-  <!-- * Testimonials * -->
-  <section id="testimonials" class="testimonials">
-    <h2>Our Trusted Clients</h2>
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <img src="assets/icons/avatar.svg" alt="Avatar of Sarah Jenkins" class="avatar" />
+          <h4>Sarah Jenkins</h4>
+          <p>"BillUp completely changed the way I report that anxiety. Now I sit down to the app once a week as everything is handled."</p>
+        </article>
 
-    <!-- row 1 – clients -->
-    <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <img src="assets/icons/avatar.svg" alt="Avatar of Mark Thompson" class="avatar" />
+          <h4>Mark Thompson</h4>
+          <p>"Finally an app that doesn't overcomplicate things. I linked my apartment in minutes and made my first bill even faster."</p>
+        </article>
 
-      <div class="testimonial-card">
-        <img src="assets/icons/avatar.svg" alt="Sarah Jenkins" class="avatar" />
-        <h4>Sarah Jenkins</h4>
-        <p>"BillUp completely changed the way I report that anxiety. Now I sit down to the app once a week as everything is handled."</p>
+        <article class="testimonial-card">
+          <img src="assets/icons/avatar.svg" alt="Avatar of Elena Rodriguez" class="avatar" />
+          <h4>Elena Rodriguez</h4>
+          <p>"Managing rental finances used to be a real challenge for us. BillUp has made tracking household payments exceptionally easy."</p>
+        </article>
       </div>
 
-      <div class="testimonial-card">
-        <img src="assets/icons/avatar.svg" alt="Mark Thompson" class="avatar" />
-        <h4>Mark Thompson</h4>
-        <p>"Finally an app that doesn't overcomplicate things. I linked my apartment in minutes and made my first bill even faster."</p>
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <img src="assets/icons/avatar.svg" alt="Apex Utility Co. logo placeholder" class="company-logo" />
+          <h4>Apex Utility Co.</h4>
+          <p>"Since partnering with BillUp, we have seen a 25% decrease in processing errors and significantly lower end-of-month reconciliation costs."</p>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="assets/icons/avatar.svg" alt="BestTillman Internet logo placeholder" class="company-logo" />
+          <h4>BestTillman Internet</h4>
+          <p>"The integration was seamless. Our customers love it, and our billing team saves the additional reporting workload."</p>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="assets/icons/avatar.svg" alt="Metro Housing Group logo placeholder" class="company-logo" />
+          <h4>Metro Housing Group</h4>
+          <p>"BillUp provides us exactly the management per-unit oversight we needed, especially when tracking our informal collection process."</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cta" class="cta">
+      <h2>Join the Future of Household Billing!</h2>
+
+      <div class="cta-columns">
+        <div class="cta-col">
+          <h3>For Residents</h3>
+          <p>
+            Take the stress out of managing monthly expenses. Join thousands of
+            users who use BillUp to centralise their bills, track spending, and pay
+            everything on time from one secure mobile app.
+          </p>
+          <a href="#" class="btn-primary">Register Your Home</a>
+        </div>
+
+        <div class="cta-col">
+          <h3>For Companies</h3>
+          <p>
+            Modernise your collection process and improve results. Partner with
+            BillUp to offer your clients a seamless digital payment experience while
+            reducing your overall administrative costs.
+          </p>
+          <a href="#" class="btn-secondary">Partner With Us</a>
+        </div>
       </div>
 
-      <div class="testimonial-card">
-        <img src="assets/icons/avatar.svg" alt="Elena Rodriguez" class="avatar" />
-        <h4>Elena Rodriguez</h4>
-        <p>"Managing rental finances used to be a real challenge for us. BillUp has made tracking household payments exceptionally easy."</p>
+      <div class="plan-table-wrapper">
+        <h3>Compare Plans</h3>
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Resident</th>
+              <th>Company</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bill Tracking</td>
+              <td>✓</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Bill Creation</td>
+              <td>—</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Payment</td>
+              <td>✓</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Multiple Properties</td>
+              <td>✓</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Auto Invoicing</td>
+              <td>—</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Chat</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Streak System</td>
+              <td>✓</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>User Security</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+    </section>
+  </main>
 
-    </div>
-
-    <!-- row 2 – companies -->
-    <div class="testimonials-grid">
-
-      <div class="testimonial-card">
-        <img src="assets/icons/avatar.svg" alt="Apex Utility Co." class="company-logo" />
-        <h4>Apex Utility Co.</h4>
-        <p>"Since partnering with BillUp, we have seen a 25% decrease in processing errors and significantly lower end-of-month reconciliation costs."</p>
-      </div>
-
-      <div class="testimonial-card">
-        <img src="assets/icons/avatar.svg" alt="BestTillman Internet" class="company-logo" />
-        <h4>BestTillman Internet</h4>
-        <p>"The integration was seamless. Our customers love it, and our billing team saves the additional reporting workload."</p>
-      </div>
-
-      <div class="testimonial-card">
-        <img src="assets/icons/avatar.svg" alt="Metro Housing Group" class="company-logo" />
-        <h4>Metro Housing Group</h4>
-        <p>"BillUp provides us exactly the management per-unit oversight we needed, especially when tracking our informal collection process."</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- * CTA * -->
-  <section id="cta" class="cta">
-    <h2>Join the Future of Household Billing!</h2>
-
-    <div class="cta-columns">
-
-      <div class="cta-col">
-        <h3>For Residents</h3>
-        <p>
-          Take the stress out of managing monthly expenses. Join thousands of
-          users who use BillUp to centralise their bills, track spending, and pay
-          everything on time from one secure mobile app.
-        </p>
-        <a href="#" class="btn-primary">Register Your Home</a>
-      </div>
-
-      <div class="cta-col">
-        <h3>For Companies</h3>
-        <p>
-          Modernise your collection process and improve results. Partner with
-          BillUp to offer your clients a seamless digital payment experience while
-          reducing your overall administrative costs.
-        </p>
-        <a href="#" class="btn-secondary">Partner With Us</a>
-      </div>
-
-    </div>
-
-    <!-- Compare Plans table -->
-    <div class="plan-table-wrapper">
-      <h3>Compare Plans</h3>
-      <table class="plan-table">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>Resident</th>
-            <th>Company</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Bill Tracking</td>
-            <td>✓</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>Bill Creation</td>
-            <td>—</td>
-            <td>✓</td>
-          </tr>
-          <tr>
-            <td>Payment</td>
-            <td>✓</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>Multiple Properties</td>
-            <td>✓</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>Auto Invoicing</td>
-            <td>—</td>
-            <td>✓</td>
-          </tr>
-          <tr>
-            <td>Chat</td>
-            <td>✓</td>
-            <td>✓</td>
-          </tr>
-          <tr>
-            <td>Streak System</td>
-            <td>✓</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>User Security</td>
-            <td>✓</td>
-            <td>✓</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-  </section>
-
-
-  <!-- * Footer * -->
   <footer id="contact" class="footer">
     <div class="footer-inner">
-
       <div class="footer-main">
 
-        <!-- Left: newsletter + social -->
         <div class="footer-left">
           <h3>Stay Tuned</h3>
           <p class="footer-sub">Sign up for latest news, updates, and benefits!</p>
@@ -329,26 +300,24 @@
           </p>
 
           <div class="social-icons">
-            <a href="https://www.instagram.com/hlib.tr_?igsh=MTJ0b245Ym1odm9hbQ==" target="_blank" ><img src="assets/icons/instagram.png" alt="Instagram" /></a>
-            <a href="https://www.threads.com/@hlib.tr_" target="_blank"><img src="assets/icons/threads.png" alt="Threads" /></a>
-            <a href="https://www.linkedin.com/in/hlib-tretiak-473088348/" target="_blank"><img src="assets/icons/linkedin.png" alt="LinkedIn" /></a>
-            <a href="https://github.com/swapp3d" target="_blank"><img src="assets/icons/github.png" alt="GitHub" /></a>
-            <a href="https://discord.com/users/764077246163845120" target="_blank"><img src="assets/icons/discord.png" alt="Discord" /></a>
+            <a href="https://www.instagram.com/hlib.tr_?igsh=MTJ0b245Ym1odm9hbQ==" target="_blank" aria-label="Visit Instagram page"><img src="assets/icons/instagram.png" alt="Instagram Icon" /></a>
+            <a href="https://www.threads.com/@hlib.tr_" target="_blank" aria-label="Visit Threads profile"><img src="assets/icons/threads.png" alt="Threads Icon" /></a>
+            <a href="https://www.linkedin.com/in/hlib-tretiak-473088348/" target="_blank" aria-label="Visit LinkedIn profile"><img src="assets/icons/linkedin.png" alt="LinkedIn Icon" /></a>
+            <a href="https://github.com/swapp3d" target="_blank" aria-label="Visit project GitHub repository"><img src="assets/icons/github.png" alt="GitHub Icon" /></a>
+            <a href="https://discord.com/users/764077246163845120" target="_blank" aria-label="View Discord profile"><img src="assets/icons/discord.png" alt="Discord Icon" /></a>
           </div>
         </div>
 
         <div class="footer-divider"></div>
 
-        <!-- Right: nav links + contact -->
         <div class="footer-right">
-
           <div class="footer-col">
             <h4>Explore</h4>
             <ul>
               <li><a href="#">About Project</a></li>
               <li><a href="#">Our Team</a></li>
               <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#contact">Contact Support</a></li>
             </ul>
           </div>
 
@@ -364,40 +333,35 @@
           <div class="footer-col">
             <h4>Contact</h4>
             <div class="contact-row">
-              <img src="assets/icons/location.svg" alt="" />
+              <img src="assets/icons/location.svg" alt="Location Icon" />
               <span>Vilnius, Lithuania</span>
             </div>
             <div class="contact-row">
-              <img src="assets/icons/phone.svg" alt="" />
+              <img src="assets/icons/phone.svg" alt="Phone Icon" />
               <span>(+37) 096 623 30 317</span>
             </div>
             <div class="contact-row">
-              <img src="assets/icons/mail.svg" alt="" />
+              <img src="assets/icons/mail.svg" alt="Email Icon" />
               <span>hlib.tretiak.v@gmail.com</span>
             </div>
           </div>
-
         </div>
       </div>
-
     </div> 
 
     <hr class="footer-hr" />
 
-    <!-- bottom bar -->
     <div class="footer-bottom">
       <div class="footer-logo">
-        <img src="assets/icons/logo.svg" alt="BillUp" />
+        <img src="assets/icons/logo.svg" alt="BillUp Logo" />
       </div>
       <p class="copyright">© Copyright 2026 by Hlib Tretiak</p>
-      <a href="#" class="back-to-top">
-        <img src="assets/icons/top_arrow.svg" alt="Back to top" />
+      <a href="#" class="back-to-top" aria-label="Scroll back to top">
+        <img src="assets/icons/top_arrow.svg" alt="Back to top arrow icon" />
       </a>
     </div>
-
   </footer>
 
-  <!-- script imports -->
    <script src="js/burger.js"></script>
    <script src="js/video-autoplay.js"></script>
 
