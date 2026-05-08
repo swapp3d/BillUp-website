@@ -24,6 +24,7 @@
 /* smooth scrolling navigation */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,14 +34,15 @@ body {
   line-height: 1.6;
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* decorative background blobs */
 .bg-effects {
   position: absolute;
   top: 0;
-  left: -10%;        /* allows ~10% bleed on each side */
-  width: 120%;       /* total 20% overflow, clipped by body overflow */
+  left: -10%;
+  width: 120%;
   height: 100%;
   z-index: 0;
   pointer-events: none;
@@ -218,6 +220,7 @@ header {
 /* === BURGER OVERLAY === */
 .nav-overlay {
   position: fixed;
+  overflow-x: hidden;
   top: 70px; /* overridden by js dynamically */
   right: 0;
   width: 100%;
