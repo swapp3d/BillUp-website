@@ -10,7 +10,7 @@ Built as part of a web development coursework project.
 
 - HTML5
 - CSS3
-- JavaScript (TBA)
+- JavaScript
 
 ---
 
@@ -19,11 +19,16 @@ Built as part of a web development coursework project.
 ```
 billup/
 ├── index.html
+├── about.html
 ├── css/
 │   └── style.css
+├── js/
+│   ├── burger.js
+│   ├── video-autoplay.js
+│   └── form-validation.js
 └── assets/
-    ├── images/
-    └── icons/
+├── images/
+└── icons/
 ```
 
 ---
@@ -31,17 +36,28 @@ billup/
 ## Features
 
 - Semantic HTML5 structure
-- External, internal, and inline CSS usage
 - Custom typography — Montserrat Alternates + Instrument Sans (Google Fonts)
-- Responsive section layout using Flexbox and CSS Grid
+- Responsive layout using Flexbox and CSS Grid
+- Mobile-first breakpoint at 768px
 - Sticky navigation bar
+- Burger menu with animated overlay (mobile)
 - Hero section with CTA buttons
 - Feature cards grid (2×2)
-- "How It Works" section with Cloudinary imported videos (Autoplay TBA with JavaScript)
+- "How It Works" section with Cloudinary-hosted videos (scroll-triggered autoplay)
 - Testimonials grid (2 rows × 3 cards)
-- CTA section with "For Residents" and "For Companies" cards
+- CTA section with Resident and Company columns
 - Compare Plans table
-- Structured footer with newsletter form, navigation links (destinations: TBA), contact info, social icons, and back-to-top button
+- Footer with newsletter signup form (with validation), navigation links, contact info, social icons, and back-to-top button
+- About page with responsive layout and back button
+
+---
+## JavaScript
+
+| File | Purpose |
+|---|---|
+| `burger.js` | Toggles mobile nav overlay; closes on link click; dynamically positions overlay below navbar |
+| `video-autoplay.js` | Uses IntersectionObserver to play/pause step videos when 50% in viewport |
+| `form-validation.js` | Validates newsletter form (name ≥ 2 chars, email requires `@` and `.com`); shows success alert and clears fields |
 
 ---
 
