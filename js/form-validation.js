@@ -1,32 +1,35 @@
-const signUpBtn = document.querySelector('.newsletter-form .btn-full');
-const emailInput = document.querySelector('.newsletter-form input[type="email"]');
-const nameInput  = document.querySelector('.newsletter-form input[type="text"]');
+const signUpForm = document.querySelector('.newsletter-form');
+const emailInput = document.querySelector('#email');
+const nameInput = document.querySelector('#fullname');
 
 function isValidEmail(email) {
-  return email.includes('@') && email.includes('.com');
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 function isValidName(name) {
   return name.trim().length >= 2;
 }
 
-signUpBtn.addEventListener('click', () => {
-  const email = emailInput.value.trim();
-  const name  = nameInput.value.trim();
+if (signUpForm && emailInput && nameInput) {
+  signUpForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-  if (!isValidName(name)) {
-    alert('Please enter your full name (at least 2 characters).');
-    return;
-  }
+    const email = emailInput.value.trim();
+    const name = nameInput.value.trim();
 
-  if (!isValidEmail(email)) {
-    alert('Please enter a valid email address.');
-    return;
-  }
+    if (!isValidName(name)) {
+      alert('Please enter your full name (at least 2 characters).');
+      nameInput.focus();
+      return;
+    }
 
-  alert(`Thank you, ${name}! You have successfully subscribed.`);
+    if (!isValidEmail(email)) {
+      alert('Please enter a valid email address.');
+      emailInput.focus();
+      return;
+    }
 
-  //clear fields after success
-  emailInput.value = '';
-  nameInput.value  = '';
-});
+    alert(`Thank you, ${name}! You have successfully subscribed.`);
+    signUpForm.reset();
+  });
+}

@@ -15,14 +15,14 @@
 </head>
 <body>
 
-  <div class="bg-effects">
+  <aside class="bg-effects" aria-hidden="true">
     <img src="assets/images/bg_effects.svg" alt="Background decorative shapes" />
-  </div>
+  </aside>
 
   <header>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
       <div class="logo">
-        <a href="index.html"><img src="assets/icons/logo.svg" alt="BillUp Logo" /></a>
+        <a href="index.html" aria-label="BillUp home page"><img src="assets/icons/logo.svg" alt="BillUp Logo" /></a>
       </div>
 
       <ul class="nav-links">
@@ -34,10 +34,10 @@
       </ul>
 
       <div class="nav-right">
-        <div class="nav-icon">
+        <div class="nav-icon" aria-label="User profile">
           <img src="assets/icons/avatar.svg" alt="User account profile" />
         </div>
-        <button class="burger" id="burgerBtn" aria-label="Open navigation menu">
+        <button class="burger" id="burgerBtn" aria-label="Open navigation menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -46,7 +46,7 @@
     </nav>
   </header>
 
-   <div class="nav-overlay" id="navOverlay">
+  <nav class="nav-overlay" id="navOverlay" aria-label="Mobile navigation">
     <ul class="overlay-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#how-it-works">Setup Flow</a></li>
@@ -54,7 +54,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </div>
+  </nav>
 
   <main>
     <section id="hero" class="hero">
@@ -66,12 +66,12 @@
           take total control of your household spending today.
         </p>
         <div class="hero-buttons">
-          <a href="https://github.com/swapp3d/BillUp-v2-be" target="_blank" class="btn-primary">Get Started</a>
+          <a href="https://github.com/swapp3d/BillUp-v2-be" target="_blank" rel="noreferrer" class="btn-primary">Get Started</a>
           <a href="about.html" class="btn-secondary">Learn More</a>
         </div>
       </div>
 
-      <div class="hero-image">
+      <div class="hero-image" aria-hidden="true">
         <img src="assets/images/hero_image.png" alt="BillUp app dashboard preview on mobile devices" />
       </div>
     </section>
@@ -109,41 +109,41 @@
     <section id="how-it-works" class="how-it-works">
       <h2>How It Works?</h2>
 
-       <div class="step">
+      <div class="step">
         <div class="step-media">
-          <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501670/BillUp_Register_ih1v0t.mp4" muted loop playsinline aria-label="Video demonstrating account creation"></video>
+          <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501670/BillUp_Register_ih1v0t.mp4" muted loop playsinline aria-label="Video demonstrating account creation process"></video>
         </div>
         <div class="step-text">
           <h3>Create Account</h3>
           <p>Download the app and enter your basic information to set up your secure
             account. Complete your profile to access the personal dashboard where
             you will manage all your household expenses.</p>
-          </div>
         </div>
+      </div>
 
-         <div class="step step-reverse">
-          <div class="step-media">
-            <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501716/BillUp_Residence_fyiagz.mp4" muted loop playsinline aria-label="Video demonstrating how to link residences"></video>
-          </div>
-          <div class="step-text">
-            <h3>Link Residences</h3>
-            <p>Enter the address for your primary residence or multiple rental units.
-              Link your specific utility accounts to this address to centralise your
-              billing data in one organised location.</p>
-            </div>
-          </div>
+      <div class="step step-reverse">
+        <div class="step-media">
+          <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501716/BillUp_Residence_fyiagz.mp4" muted loop playsinline aria-label="Video demonstrating how to link residences"></video>
+        </div>
+        <div class="step-text">
+          <h3>Link Residences</h3>
+          <p>Enter the address for your primary residence or multiple rental units.
+            Link your specific utility accounts to this address to centralise your
+            billing data in one organised location.</p>
+        </div>
+      </div>
 
-           <div class="step">
-            <div class="step-media">
-              <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501730/BillUp_Bills_zetug4.mp4" muted loop playsinline aria-label="Video demonstrating bill management"></video>
-            </div>
-            <div class="step-text">
-              <h3>Manage Bills</h3>
-              <p>View a clear list of all your current and upcoming charges. Use the
-                dashboard to check balances and settle your bills directly through the
-                app to keep your accounts up to date.</p>
-              </div>
-            </div>
+      <div class="step">
+        <div class="step-media">
+          <video class="step-video" src="https://res.cloudinary.com/da4ckxyog/video/upload/v1773501730/BillUp_Bills_zetug4.mp4" muted loop playsinline aria-label="Video demonstrating bill management"></video>
+        </div>
+        <div class="step-text">
+          <h3>Manage Bills</h3>
+          <p>View a clear list of all your current and upcoming charges. Use the
+            dashboard to check balances and settle your bills directly through the
+            app to keep your accounts up to date.</p>
+        </div>
+      </div>
     </section>
 
     <section id="testimonials" class="testimonials">
@@ -201,7 +201,7 @@
             users who use BillUp to centralise their bills, track spending, and pay
             everything on time from one secure mobile app.
           </p>
-          <a href="#" class="btn-primary">Register Your Home</a>
+          <a href="about.html" class="btn-primary">Register Your Home</a>
         </div>
 
         <div class="cta-col">
@@ -211,7 +211,7 @@
             BillUp to offer your clients a seamless digital payment experience while
             reducing your overall administrative costs.
           </p>
-          <a href="#" class="btn-secondary">Partner With Us</a>
+          <a href="about.html" class="btn-secondary">Partner With Us</a>
         </div>
       </div>
 
@@ -220,9 +220,9 @@
         <table class="plan-table">
           <thead>
             <tr>
-              <th>Feature</th>
-              <th>Resident</th>
-              <th>Company</th>
+              <th scope="col">Feature</th>
+              <th scope="col">Resident</th>
+              <th scope="col">Company</th>
             </tr>
           </thead>
           <tbody>
@@ -280,19 +280,19 @@
           <h3>Stay Tuned</h3>
           <p class="footer-sub">Sign up for latest news, updates, and benefits!</p>
 
-          <div class="newsletter-form">
+          <form class="newsletter-form" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label>Email Address*</label>
-                <input type="email" placeholder="Enter Your Email Address" required />
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" required />
               </div>
               <div class="form-group">
-                <label>Full Name*</label>
-                <input type="text" placeholder="Enter Your Full Name" required />
+                <label for="fullname">Full Name*</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter Your Full Name" required />
               </div>
             </div>
-            <button type="button" class="btn-primary btn-full">Sign Up</button>
-          </div>
+            <button type="submit" class="btn-primary btn-full">Sign Up</button>
+          </form>
 
           <p class="footer-disclaimer">
             We respect your privacy. By signing up, you agree to receive newsletters from BillUp.
@@ -300,11 +300,11 @@
           </p>
 
           <div class="social-icons">
-            <a href="https://www.instagram.com/hlib.tr_?igsh=MTJ0b245Ym1odm9hbQ==" target="_blank" aria-label="Visit Instagram page"><img src="assets/icons/instagram.png" alt="Instagram Icon" /></a>
-            <a href="https://www.threads.com/@hlib.tr_" target="_blank" aria-label="Visit Threads profile"><img src="assets/icons/threads.png" alt="Threads Icon" /></a>
-            <a href="https://www.linkedin.com/in/hlib-tretiak-473088348/" target="_blank" aria-label="Visit LinkedIn profile"><img src="assets/icons/linkedin.png" alt="LinkedIn Icon" /></a>
-            <a href="https://github.com/swapp3d" target="_blank" aria-label="Visit project GitHub repository"><img src="assets/icons/github.png" alt="GitHub Icon" /></a>
-            <a href="https://discord.com/users/764077246163845120" target="_blank" aria-label="View Discord profile"><img src="assets/icons/discord.png" alt="Discord Icon" /></a>
+            <a href="https://www.instagram.com/hlib.tr_?igsh=MTJ0b245Ym1odm9hbQ==" target="_blank" rel="noreferrer" aria-label="Visit Instagram page"><img src="assets/icons/instagram.png" alt="Instagram Icon" /></a>
+            <a href="https://www.threads.com/@hlib.tr_" target="_blank" rel="noreferrer" aria-label="Visit Threads profile"><img src="assets/icons/threads.png" alt="Threads Icon" /></a>
+            <a href="https://www.linkedin.com/in/hlib-tretiak-473088348/" target="_blank" rel="noreferrer" aria-label="Visit LinkedIn profile"><img src="assets/icons/linkedin.png" alt="LinkedIn Icon" /></a>
+            <a href="https://github.com/swapp3d" target="_blank" rel="noreferrer" aria-label="Visit project GitHub repository"><img src="assets/icons/github.png" alt="GitHub Icon" /></a>
+            <a href="https://discord.com/users/764077246163845120" target="_blank" rel="noreferrer" aria-label="View Discord profile"><img src="assets/icons/discord.png" alt="Discord Icon" /></a>
           </div>
         </div>
 
@@ -314,7 +314,7 @@
           <div class="footer-col">
             <h4>Explore</h4>
             <ul>
-              <li><a href="#">About Project</a></li>
+              <li><a href="about.html">About Project</a></li>
               <li><a href="#">Our Team</a></li>
               <li><a href="#">Portfolio</a></li>
               <li><a href="#contact">Contact Support</a></li>
@@ -347,7 +347,7 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
 
     <hr class="footer-hr" />
 
@@ -362,9 +362,9 @@
     </div>
   </footer>
 
-   <script src="js/burger.js"></script>
-   <script src="js/video-autoplay.js"></script>
-   <script src="js/form-validation.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/video-autoplay.js"></script>
+  <script src="js/form-validation.js"></script>
 
 </body>
 </html>
