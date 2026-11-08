@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn why BillUp was created and what the team stands for: clarity, security and simplicity in household billing." />
   <title>BillUp – About</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +21,7 @@
   <header>
     <nav class="navbar" aria-label="Main navigation">
       <div class="logo">
-        <a href="index.html"><img src="assets/icons/logo.svg" alt="BillUp Logo" /></a>
+        <a href="index.html" aria-label="BillUp home page"><img src="assets/icons/logo.svg" alt="BillUp Logo" /></a>
       </div>
 
       <ul class="nav-links">
@@ -28,14 +29,15 @@
         <li><a href="index.html#how-it-works">Setup Flow</a></li>
         <li><a href="index.html#testimonials">Testimonials</a></li>
         <li><a href="about.html" class="active">About</a></li>
+        <li><a href="team.html">Our Team</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
 
       <div class="nav-right">
         <div class="nav-icon">
-          <img src="assets/icons/avatar.svg" alt="User account" />
+          <img src="assets/icons/avatar.svg" alt="User account profile" />
         </div>
-        <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+        <button type="button" class="burger" id="burgerBtn" aria-label="Open navigation menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -49,7 +51,8 @@
       <li><a href="index.html#features">Features</a></li>
       <li><a href="index.html#how-it-works">Setup Flow</a></li>
       <li><a href="index.html#testimonials">Testimonials</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html">About Project</a></li>
+      <li><a href="team.html">Our Team</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
   </nav>
@@ -72,9 +75,12 @@
             It is efficiency for providers and peace of mind for residents in one app.
           </p>
 
-          <a href="index.html" class="btn-back" aria-label="Go back">
-            <img src="assets/icons/top_arrow.svg" alt="Go back" />
-          </a>
+          <div class="about-actions">
+            <a href="index.html" class="btn-back" aria-label="Go back">
+              <img src="assets/icons/top_arrow.svg" alt="Go back" />
+            </a>
+            <a href="team.html" class="btn-secondary">Meet the Team</a>
+          </div>
         </article>
 
         <figure class="about-image">
@@ -87,8 +93,135 @@
 
       </div>
     </section>
+
+    <section id="values" class="values">
+      <h2>What We Stand For</h2>
+
+      <div class="values-grid">
+        <article class="value-card">
+          <img src="assets/icons/billing_hub.svg" alt="" />
+          <h3>Clarity</h3>
+          <p>Every bill, due date and balance in one place, so nothing gets lost or forgotten.</p>
+        </article>
+
+        <article class="value-card">
+          <img src="assets/icons/security.svg" alt="" />
+          <h3>Security</h3>
+          <p>Personal and payment data is protected with encryption and careful access control.</p>
+        </article>
+
+        <article class="value-card">
+          <img src="assets/icons/payments.svg" alt="" />
+          <h3>Simplicity</h3>
+          <p>Paying and tracking should take a few taps, for residents and companies alike.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="join" class="about-cta">
+      <div class="about-cta-box">
+        <h2>Ready to simplify your bills?</h2>
+        <p>Try BillUp or get to know the people building it.</p>
+        <div class="about-cta-buttons">
+          <a href="https://github.com/swapp3d/BillUp-v2-be" target="_blank" rel="noreferrer" class="btn-primary">Get Started</a>
+          <a href="team.html" class="btn-secondary">Our Team</a>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer id="contact" class="footer">
+    <div class="footer-inner">
+      <div class="footer-main">
+
+        <div class="footer-left">
+          <h3>Stay Tuned</h3>
+          <p class="footer-sub">Sign up for latest news, updates, and benefits!</p>
+
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" autocomplete="email" maxlength="100" aria-describedby="email-error" required />
+                <p class="field-error" id="email-error" aria-live="polite"></p>
+              </div>
+              <div class="form-group">
+                <label for="fullname">Full Name*</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter Your Full Name" autocomplete="name" maxlength="60" aria-describedby="fullname-error" required />
+                <p class="field-error" id="fullname-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary btn-full">Sign Up</button>
+          </form>
+
+          <p class="footer-disclaimer">
+            We respect your privacy. By signing up, you agree to receive newsletters from BillUp.
+            You can unsubscribe at any time.
+          </p>
+
+          <div class="social-icons">
+            <a href="https://www.instagram.com/hlib.tr_?igsh=MTJ0b245Ym1odm9hbQ==" target="_blank" rel="noreferrer" aria-label="Visit Instagram page"><img src="assets/icons/instagram.png" alt="Instagram Icon" /></a>
+            <a href="https://www.threads.com/@hlib.tr_" target="_blank" rel="noreferrer" aria-label="Visit Threads profile"><img src="assets/icons/threads.png" alt="Threads Icon" /></a>
+            <a href="https://www.linkedin.com/in/hlib-tretiak-473088348/" target="_blank" rel="noreferrer" aria-label="Visit LinkedIn profile"><img src="assets/icons/linkedin.png" alt="LinkedIn Icon" /></a>
+            <a href="https://github.com/swapp3d" target="_blank" rel="noreferrer" aria-label="Visit project GitHub repository"><img src="assets/icons/github.png" alt="GitHub Icon" /></a>
+            <a href="https://discord.com/users/764077246163845120" target="_blank" rel="noreferrer" aria-label="View Discord profile"><img src="assets/icons/discord.png" alt="Discord Icon" /></a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-right">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="about.html">About Project</a></li>
+              <li><a href="team.html">Our Team</a></li>
+              <li><a href="#contact">Contact Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="index.html#cta">For Residents</a></li>
+              <li><a href="index.html#cta">For Companies</a></li>
+              <li><a href="index.html#features">Payments</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <div class="contact-row">
+              <img src="assets/icons/location.svg" alt="Location Icon" />
+              <span>Vilnius, Lithuania</span>
+            </div>
+            <div class="contact-row">
+              <img src="assets/icons/phone.svg" alt="Phone Icon" />
+              <span>(+37) 096 623 30 317</span>
+            </div>
+            <div class="contact-row">
+              <img src="assets/icons/mail.svg" alt="Email Icon" />
+              <span>hlib.tretiak.v@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-hr" />
+
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <img src="assets/icons/logo.svg" alt="BillUp Logo" />
+      </div>
+      <p class="copyright">© Copyright 2026 by Hlib Tretiak</p>
+      <a href="#" class="back-to-top" aria-label="Scroll back to top">
+        <img src="assets/icons/top_arrow.svg" alt="Back to top arrow icon" />
+      </a>
+    </div>
+  </footer>
+
   <script src="js/burger.js"></script>
+  <script src="js/form-validation.js"></script>
 </body>
 </html>

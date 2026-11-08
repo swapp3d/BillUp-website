@@ -30,14 +30,15 @@
         <li><a href="#how-it-works">Setup Flow</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Our Team</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
       <div class="nav-right">
-        <div class="nav-icon" aria-label="User profile">
+        <div class="nav-icon">
           <img src="assets/icons/avatar.svg" alt="User account profile" />
         </div>
-        <button class="burger" id="burgerBtn" aria-label="Open navigation menu" aria-expanded="false">
+        <button type="button" class="burger" id="burgerBtn" aria-label="Open navigation menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -51,7 +52,8 @@
       <li><a href="#features">Features</a></li>
       <li><a href="#how-it-works">Setup Flow</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html">About Project</a></li>
+      <li><a href="team.html">Our Team</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -228,43 +230,43 @@
           <tbody>
             <tr>
               <td>Bill Tracking</td>
-              <td>✓</td>
-              <td>—</td>
+              <td class="yes" aria-label="Included">✓</td>
+              <td class="no" aria-label="Not included">—</td>
             </tr>
             <tr>
               <td>Bill Creation</td>
-              <td>—</td>
-              <td>✓</td>
+              <td class="no" aria-label="Not included">—</td>
+              <td class="yes" aria-label="Included">✓</td>
             </tr>
             <tr>
               <td>Payment</td>
-              <td>✓</td>
-              <td>—</td>
+              <td class="yes" aria-label="Included">✓</td>
+              <td class="no" aria-label="Not included">—</td>
             </tr>
             <tr>
               <td>Multiple Properties</td>
-              <td>✓</td>
-              <td>—</td>
+              <td class="yes" aria-label="Included">✓</td>
+              <td class="no" aria-label="Not included">—</td>
             </tr>
             <tr>
               <td>Auto Invoicing</td>
-              <td>—</td>
-              <td>✓</td>
+              <td class="no" aria-label="Not included">—</td>
+              <td class="yes" aria-label="Included">✓</td>
             </tr>
             <tr>
               <td>Chat</td>
-              <td>✓</td>
-              <td>✓</td>
+              <td class="yes" aria-label="Included">✓</td>
+              <td class="yes" aria-label="Included">✓</td>
             </tr>
             <tr>
               <td>Streak System</td>
-              <td>✓</td>
-              <td>—</td>
+              <td class="yes" aria-label="Included">✓</td>
+              <td class="no" aria-label="Not included">—</td>
             </tr>
             <tr>
               <td>User Security</td>
-              <td>✓</td>
-              <td>✓</td>
+              <td class="yes" aria-label="Included">✓</td>
+              <td class="yes" aria-label="Included">✓</td>
             </tr>
           </tbody>
         </table>
@@ -280,15 +282,17 @@
           <h3>Stay Tuned</h3>
           <p class="footer-sub">Sign up for latest news, updates, and benefits!</p>
 
-          <form class="newsletter-form" novalidate>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Email Address*</label>
-                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" required />
+                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" autocomplete="email" maxlength="100" aria-describedby="email-error" required />
+                <p class="field-error" id="email-error" aria-live="polite"></p>
               </div>
               <div class="form-group">
                 <label for="fullname">Full Name*</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter Your Full Name" required />
+                <input type="text" id="fullname" name="fullname" placeholder="Enter Your Full Name" autocomplete="name" maxlength="60" aria-describedby="fullname-error" required />
+                <p class="field-error" id="fullname-error" aria-live="polite"></p>
               </div>
             </div>
             <button type="submit" class="btn-primary btn-full">Sign Up</button>
@@ -315,8 +319,7 @@
             <h4>Explore</h4>
             <ul>
               <li><a href="about.html">About Project</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Portfolio</a></li>
+              <li><a href="team.html">Our Team</a></li>
               <li><a href="#contact">Contact Support</a></li>
             </ul>
           </div>
@@ -324,9 +327,9 @@
           <div class="footer-col">
             <h4>Services</h4>
             <ul>
-              <li><a href="#">For Residents</a></li>
-              <li><a href="#">For Companies</a></li>
-              <li><a href="#">Payments</a></li>
+              <li><a href="#cta">For Residents</a></li>
+              <li><a href="#cta">For Companies</a></li>
+              <li><a href="#features">Payments</a></li>
             </ul>
           </div>
 

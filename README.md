@@ -10,7 +10,8 @@ Built as part of a web development coursework project.
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (vanilla, no libraries)
+- Bootstrap 5.3 (local copy in `vendor/bootstrap/`)
 
 ---
 
@@ -20,12 +21,16 @@ Built as part of a web development coursework project.
 billup/
 ├── index.html
 ├── about.html
+├── team.html          (Our Team: Bootstrap carousel, accordion, list group)
+├── subscribed.html    (shown after a valid newsletter sign-up)
+├── vendor/bootstrap/
 ├── css/
 │   └── style.css
 ├── js/
 │   ├── burger.js
 │   ├── video-autoplay.js
-│   └── form-validation.js
+│   ├── form-validation.js
+│   └── subscribed.js
 └── assets/
 ├── images/
 └── icons/
@@ -48,7 +53,10 @@ billup/
 - CTA section with Resident and Company columns
 - Compare Plans table
 - Footer with newsletter signup form (with validation), navigation links, contact info, social icons, and back-to-top button
-- About page with responsive layout and back button
+- About page: intro, "What We Stand For" cards, call-to-action and footer
+- Navbar with About and Our Team links (burger menu below 900px)
+- Our Team page: Bootstrap carousel of team-member cards (mouse-wheel on desktop, swipe on mobile, faded sides; photos go in `assets/images/team/member-1.jpg` … `member-6.jpg`), breadcrumb, list group and FAQ accordion
+- Subscription confirmation page: personalised greeting, alert, list group and an animated redirect countdown (progress bar)
 
 ---
 ## JavaScript
@@ -57,7 +65,9 @@ billup/
 |---|---|
 | `burger.js` | Toggles mobile nav overlay; closes on link click; dynamically positions overlay below navbar |
 | `video-autoplay.js` | Uses IntersectionObserver to play/pause step videos when 50% in viewport |
-| `form-validation.js` | Validates newsletter form (name ≥ 2 chars, email requires `@` and `.com`); shows success alert and clears fields |
+| `form-validation.js` | Validates the newsletter form by format (first + last name, valid email pattern). Invalid fields are highlighted red with an inline message; valid input opens `subscribed.html` |
+| `team-carousel.js` | Wheel scrolling and fade/slide mode for the team carousel, photo placeholders |
+| `subscribed.js` | Reads the name/email from the URL, fades the card in (`setTimeout`) and runs the redirect countdown (`setInterval` / `clearInterval`) with a cancel/restart button |
 
 ---
 
