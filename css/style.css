@@ -491,6 +491,15 @@ header {
   margin: 0 auto 32px;
 }
 
+.testimonial-card .avatar,
+.testimonial-card .company-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
 .testimonial-card {
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(0, 0, 0, 0.2);
@@ -511,15 +520,6 @@ header {
   box-shadow: 0 0 10px var(--color-secondary-light) inset;
   transform: scale(var(--hover-scale));
   z-index: 10;
-}
-
-.testimonial-card .avatar,
-.testimonial-card .company-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 12px;
 }
 
 .testimonial-card h4 {
@@ -636,7 +636,7 @@ header {
   display: none;
 }
 
-  .about-section {
+.about-section {
   background: white;
   padding: 80px max(24px, calc((100% - var(--max-width)) / 2));
 }
@@ -935,12 +935,28 @@ header {
 }
 
 .breadcrumb {
-  --bs-breadcrumb-padding-x: 0;
-  --bs-breadcrumb-padding-y: 0;
-  --bs-breadcrumb-margin-bottom: 24px;
-  --bs-breadcrumb-divider-color: var(--color-text);
-  --bs-breadcrumb-item-active-color: var(--color-text);
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
   font-size: 16px;
+  color: var(--color-text);
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 8px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: none;
+  content: "/";
+  padding-right: 8px;
+  color: var(--color-text);
+}
+
+.breadcrumb-item.active {
+  color: var(--color-text);
 }
 
 .breadcrumb-item a {
@@ -993,6 +1009,10 @@ header {
   margin-bottom: 16px;
 }
 
+#team-members h2 {
+  margin-bottom: 12px;
+}
+
 .section-lead {
   font-size: 20px;
   color: var(--color-text);
@@ -1008,6 +1028,21 @@ header {
 /* room for the hover scale so cards are never cut; the sides fade out instead */
 .team-carousel .carousel-inner {
   padding: 28px 12px 20px;
+}
+
+/* every card has the same size: equal inside a row, and equal across pages via --team-card-height (set in JS) */
+.team-slot {
+  display: flex;
+}
+
+.team-slot .team-card {
+  width: 100%;
+  min-height: var(--team-card-height, 0);
+}
+
+/* keeps a gap between pages while sliding */
+.team-carousel .carousel-item {
+  padding: 0 12px;
 }
 
 .team-card {
@@ -1461,17 +1496,6 @@ header {
 }
 
 /* === CONSISTENCY ACROSS PAGES === */
-/* shared accent under every section heading */
-section h2::after {
-  content: "";
-  display: block;
-  width: 64px;
-  height: 4px;
-  margin-top: 12px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-}
-
 a:focus-visible,
 button:focus-visible,
 .carousel:focus-visible {
@@ -1504,12 +1528,6 @@ button:focus-visible,
 
 .step-video {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.testimonial-card .avatar,
-.testimonial-card .company-logo {
-  border: 2px solid var(--color-secondary-light);
-  padding: 3px;
 }
 
 .cta-col {
@@ -1548,17 +1566,6 @@ button:focus-visible,
 }
 
 /* === ABOUT PAGE === */
-.about-actions {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-top: 32px;
-}
-
-.about-actions .btn-back {
-  margin-top: 0;
-}
-
 .values {
   padding: 80px 24px;
 }
@@ -1636,11 +1643,6 @@ button:focus-visible,
   font-size: 40px;
   font-weight: 800;
   margin-bottom: 12px;
-}
-
-.about-cta-box h2::after {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .about-cta-box p {
@@ -1736,10 +1738,6 @@ button:focus-visible,
 
   .about-cta-box p {
     font-size: 18px;
-  }
-
-  .about-actions .btn-back {
-    display: none;
   }
 
   .team-carousel .carousel-inner {

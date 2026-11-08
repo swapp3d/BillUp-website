@@ -55,7 +55,7 @@ billup/
 - Footer with newsletter signup form (with validation), navigation links, contact info, social icons, and back-to-top button
 - About page: intro, "What We Stand For" cards, call-to-action and footer
 - Navbar with About and Our Team links (burger menu below 900px)
-- Our Team page: Bootstrap carousel of team-member cards (mouse-wheel on desktop, swipe on mobile, faded sides; photos go in `assets/images/team/member-1.jpg` … `member-6.jpg`), breadcrumb, list group and FAQ accordion
+- Our Team page: Bootstrap carousel of team-member cards (slides smoothly: mouse wheel on desktop, finger swipe on mobile; 3/2/1 cards per view; faded sides; photos go in `assets/images/team/member-1.jpg` … `member-6.jpg`), breadcrumb, list group and FAQ accordion
 - Subscription confirmation page: personalised greeting, alert, list group and an animated redirect countdown (progress bar)
 
 ---
